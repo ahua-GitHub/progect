@@ -1,0 +1,133 @@
+/*all tag*/
+*{margin: 0;padding-top: 0}
+body{background:yellowgreen;}
+div{background: white}
+
+/*头部*/
+.dog{width: 300px;height: 500px;position: relative;left: 0;right: 0;margin: 0 auto;top: 50px;}
+
+
+/*额头*/
+.forehead{width:255px;height:120px;    border-radius: 100px 100px 3px 3px;}
+
+/*脸*/
+.face{width: 275px;height:170px;border-radius:50%;position: absolute;top:33px;left: -10px;z-index: 2;}
+
+/*下巴*/
+.chin{width:260px;height:100px;border-radius:50%/0 0 100px 100px;position: absolute;top:144px;left:-3px;z-index: 1;}
+
+/*耳朵*/
+.ear{width:50px;height: 140px;background:blue;border-radius: 50%/ 0 0 100px 100px;position: absolute;top:110px;left:6px;
+    transform: rotate(10deg);animation: ear-turn 1s alternate-reverse ease-in-out infinite;}
+.ear.right{left: 200px;transform: rotate(-10deg);animation-name: ear-turn-right; }
+
+/*眼睛*/
+.black-eye{width:67px;height:67px;border-radius: 160px 90px 160px 10px;position:absolute;top:30px;left:25px;
+    box-shadow:3px 0 25px -2px;z-index:2;transform: rotate(16deg);}/*黑眼圈，给眼睛一样大小的div设置阴影效果*/
+.black-eye.right{top: 30px;left: 170px;transform: rotate(-105deg)}
+.eye{width:67px;height: 67px;border-radius: 160px 90px 160px 10px;position:absolute;top:30px;left:25px;
+    box-shadow:-4px 0 2px -1px;z-index:2;transform: rotate(16deg);overflow: hidden;}
+.eye.right{transform:rotate(-105deg);left: 169px;box-shadow:0 3px 1px 0;}
+.eyeball{width: 50px; height: 50px; border-radius: 50%; position: absolute; left:23px;top:19px; background: #e79101;
+    box-shadow: 0 0 4px 1px #333 inset; z-index: 2;animation: eyeball-turn 1s infinite alternate-reverse ease-in-out;}
+.eyeball.right{left:-3px;top:-2px;animation-name: eyeball-turn-right;}
+.eyeball.right:before{content: ''; position: absolute; left:4px; top:5px; width:35px; height:35px;
+    background: #000; border-radius: 50%}
+.eyeball.right:after{content:"";position: absolute;left:25px;top:30px;width: 13px;height:13px;background: white;
+    border-radius: 50%;}
+.eyeball.left:before{content: ''; position: absolute; left:10px; top:10px; width:35px; height:35px;
+    background: #000; border-radius: 50%}
+.eyeball.left:after{content:"";position: absolute;left:5px;top:13px;width: 13px;height:13px;background: white;
+    border-radius: 50%;}
+
+/*鼻子*/
+.nose{width: 110px;height: 60px;background: rgb(54,48,53);border-radius:70%/ 50px 50px 40px 40px;position: absolute;
+    top:90px;left:74px;z-index: 2;}
+/*鼻孔*/
+.nose:before{width: 15px;height: 5px;border-radius:50%;background: linear-gradient(347deg, #363035 0%, #000 50%, #000 100%);
+    position: absolute;top:42px;left:28px;content: "";z-index: 3;transform: rotate(80deg);box-shadow: 0.1px 0.3px 2px 0.4px;
+    animation: nose-open 1s infinite alternate-reverse;}
+.nose::after{width: 15px;height: 5px;border-radius:50%;background: linear-gradient(347deg, #363035 0%, #000 50%, #000 100%);
+    position: absolute;top:43px;left:60px;content: "";z-index: 3;transform: rotate(95deg);box-shadow: 0.1px 0.3px 2px 0.4px;
+    animation:nose-open-right 1s infinite alternate-reverse;}
+/*反光效果*/
+.light{width: 100px;height:30px;background: linear-gradient(30deg, #fff 0%, #fff 8%, #b1aeb1 15%, #b1aeb1 50%, #544d53 100%);
+   border-radius:68%/32px 32px 12px 12px;position: absolute;top:1px;left: 4px;}
+
+/*嘴巴*/
+.mouth{width: 170px;height: 60px;border-radius:50% / 0 0 60px 60px; background: #671316;z-index: 2;
+    box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.5) inset;position: absolute;top: 167px;left:42px;
+    animation: mouth-open 1s infinite ease-in-out;
+    animation-direction: alternate-reverse;}
+/*嘴唇*/
+.lip{width: 170px;height: 30px;position: absolute;top:158px;left:42px;z-index:3;
+    border-radius: 50%/0 0 25px 25px;}
+/*舌头*/
+.tongue{width: 60px;height:30px;background: rgb(161,91,90);border-radius: 50%/0 0 25px 25px;position: absolute;
+    top:183px;left:96px;z-index: 2;animation: tongue-open 1s alternate-reverse ease-in-out infinite;}
+/*牙齿*/
+.tongue:before{width:20px;height: 20px;background: white;position: absolute;top:-4px;left: 10px;content: "";
+    border-radius: 17px 13px 11px 11px;}
+.tongue:after{width:20px;height: 20px;background: white;position: absolute;top:-4px;left:29px;content: "";
+    border-radius: 17px 13px 11px 11px;}
+
+/*身体*/
+.body{width: 160px; height:200px;border-radius: 50%;position: absolute;top:207px;left:47px;}
+/*身体阴影*/
+.body:before{width:75px; height:20px;background:linear-gradient(0deg,rgb(208,208,208) 0%,white 100%);content:"";z-index:3;
+    position: absolute;top:180px;left:40px;border-radius:50%/0 0 20px 20px;}
+/*胳膊*/
+.arms{width:70px;height: 110px;border-radius: 50%/35px 35px 35px 35px;;position: absolute;
+    top:240px;left:25px;transform: rotate(1deg)}
+.arms.right{top:240px;left:160px;transform: rotate(-1deg);}
+/*胳膊阴影*/
+.arms.left:before{width: 20px;height:80px;background:white;box-shadow:rgb(208,208,208) -1px 0.11px 0 0.5px;content:"";
+    z-index:3;position: absolute;top:30px;left:28px;border-radius:70%/20px 31px 14px 28px;transform: rotate(8deg)}
+.arms.right:before{width: 20px;height:80px;background:white;box-shadow:rgb(208,208,208) 1px 0.11px 0 0.5px;content:"";
+    z-index:3;position: absolute;top:31px;left:20px;border-radius:70%/20px 31px 14px 28px;transform: rotate(-6deg)}
+
+/*大腿*/
+.leg{width:70px;height:140px;border-radius:50%/40px 40px 60px 60px;position: absolute;
+    top:335px;left:50px;transform: rotate(-5deg);}
+.leg.right{top:335px;left:130px;transform: rotate(6deg);}
+/*大腿阴影*/
+.leg.left:before{width: 20px;height:55px;background:linear-gradient(-90deg,rgb(208,208,208) 0%,white 100%);content:"";
+    z-index:3;position: absolute;top:73px;left:50px;border-radius:50%/30px 42px 29px 40px;transform: rotate(20deg)}
+.leg.right:before{width: 20px;height:55px;background:linear-gradient(90deg,rgb(208,208,208) 0%,white 100%);content:"";
+    z-index:3;position: absolute;top:70px;left:1px;border-radius:50%/30px 42px 29px 40px;transform: rotate(-12deg)}
+/*脚*/
+.footer{width:70px;height: 40px;position: absolute;top:455px;left:54px;border-radius: 25px 25px 10px 10px;}
+.footer.right{top:455px;left:126px;}
+
+@keyframes eyeball-turn {
+    from{left: 23px}
+    to{left:6px}
+}
+@keyframes eyeball-turn-right {
+    from{top:-2px}
+    to{top:10px}
+}
+@keyframes nose-open {
+    from{box-shadow:0.1px 0.3px 2px 0.4px }
+    to{box-shadow:0.1px -0.7px 4px 1.4px;}
+}
+@keyframes nose-open-right{
+    from{box-shadow:0.1px 0.3px 2px 0.4px }
+    to{box-shadow:0.1px -0.7px 4px 1.4px;}
+}
+@keyframes ear-turn-right{
+    from{transform: rotate(-20deg);}
+    to{transform: rotate(5deg);}
+}
+@keyframes ear-turn {
+    from{transform: rotate(20deg)}
+    to{transform: rotate(-5deg)}
+}
+@keyframes mouth-open {
+    from{top: 167px}
+    to{top:158px}
+}
+@keyframes tongue-open {
+    from{height: 30px}
+    to{height: 50px}
+}
